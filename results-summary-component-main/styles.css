@@ -1,0 +1,217 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /** primary **/
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 81%, 88%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /** Gradients **/
+    --Light-slate-blue--background: hsl(252, 100%, 67%);
+    --light-royal-blue--background: hsl(241, 81%, 54%);
+
+    --violet-blue--circle: hsla(256, 72%, 46%, 1);
+    --persian-blue--circle: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.card{
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    gap: 0;
+}
+
+.card-left{
+    max-width: 250px;
+    background-color: var(--light-royal-blue--background);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-right{
+    max-width: 250px;
+    background-color: var(--white);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-left .text1 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--pale-blue);
+    margin: 2rem 0 1.8rem 0;
+}
+
+.text3{
+    color: #dddddda9;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    margin-bottom: 2.3rem;
+}
+
+.text2{
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1.8rem 0 1.5rem 0;
+}
+.circle{
+    border-radius: 50%;
+    background-color: var(--violet-blue--circle);
+    width: 130px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle1{
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.circle2{
+    color: #dddddda9;
+    font-size: 1.2rem;
+}
+/* right-card */
+
+.card-right{
+    padding: 2rem;
+}
+
+.box1,.box2,.box3,.box4{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--orangey-yellow);
+    padding: 1rem;
+    border-radius: .6rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+
+.card-right-btn{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 100%;
+    border: none;
+    color: var(--white);
+    background-color: rgb(67, 67, 113);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-top: 1.8rem;
+}
+
+button:hover{
+    background-color: var(--light-royal-blue--background);
+}
+
+.card-right .title{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.7rem;
+}
+
+span{
+    font-weight: 800;
+}
+
+.box-text2 span + em   {
+    font-weight: 600;
+    color: #918c8ca9;
+}
+
+.boxes i{
+    margin: 0 .8rem 0 .5rem;
+}
+
+.box2{
+    background-color: hsl(39, 100%, 80%);
+    color: hsl(39, 77%, 45%);
+}
+
+.box1{
+    background-color: hsl(0, 76%, 80%);
+    color: hsl(0, 77%, 45%);
+}
+
+.box3{
+    background-color: hsl(166, 100%, 80%);
+    color: hsl(166, 100%, 45%);
+}
+
+.box4{
+    background-color: hsl(234, 85%, 80%);
+    color: hsl(234, 85%, 45%);
+}
+
+@media (max-width:375px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-right{
+        outline: 0;
+    }
+
+    .card-right .title{
+        margin-top: .2rem;
+    }
+    .card-left{
+        min-width: 210px;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 2rem;
+        box-shadow: 0 0;
+    }
+    .card-right{
+        min-width: 210px;
+        border-radius: 0;
+        box-shadow: 0 0;
+    }
+}
